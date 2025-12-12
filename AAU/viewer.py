@@ -236,7 +236,7 @@ VTK_URL = f"https://huggingface.co/datasets/{HF_USER}/hw-pilots-data/resolve/mai
 npz_path = ensure_file(NPZ_URL, "validationCase.npz")
 vtk_path = ensure_file(VTK_URL, "validationCase.vtk")
 
-mesh, T_field, U_field = load_npz_case(npz_path, vtk_path)
+mesh, T_field, U_field = load_npz_case(npz_path)
 
 centers = mesh.cell_centers().points
 x = centers[:, 0]
