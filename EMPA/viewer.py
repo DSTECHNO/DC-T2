@@ -5,8 +5,6 @@ from pyvista import UnstructuredGrid
 import pyvista as pv
 from scipy.interpolate import griddata
 
-npz_filename = "validaitonCase.npz"
-npz_filename = "validaitonCase.vtk"
 # -------------------------------------------------
 # NPZ LOAD
 # -------------------------------------------------
