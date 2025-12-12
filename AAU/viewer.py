@@ -233,8 +233,8 @@ HF_USER = "mkuzaay"  # örn: "DSTECHNO"
 NPZ_URL = f"https://huggingface.co/datasets/{HF_USER}/hw-pilots-data/resolve/main/validationCase.npz"
 VTK_URL = f"https://huggingface.co/datasets/{HF_USER}/hw-pilots-data/resolve/main/validationCase.vtk"
 
-npz_path = ensure_file(NPZ_URL, "data/validationCase.npz")
-vtk_path = ensure_file(VTK_URL, "data/validationCase.vtk")
+npz_path = ensure_file(NPZ_URL, "validationCase.npz")
+vtk_path = ensure_file(VTK_URL, "validationCase.vtk")
 
 mesh, T_field, U_field = load_npz_case(npz_path, vtk_path)
 
