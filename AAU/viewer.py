@@ -371,7 +371,7 @@ with logo_col1:
     st.markdown("""
     <div style='text-align: center; padding: 10px;'>
         <a href='https://heatwise.eu' target='_blank'>
-            <img src='https://raw.githubusercontent.com/DSTECHNO/TDW/main/AAU/heatwise_logo.svg' 
+            <img src='https://raw.githubusercontent.com/DSTECHNO/HW-PILOTS/main/AAU/heatwise_logo.svg' 
                  alt='HEATWISE' style='width: 100%; max-width: 120px;'>
         </a>
     </div>
@@ -381,7 +381,7 @@ with logo_col2:
     st.markdown("""
     <div style='text-align: center; padding: 10px;'>
         <a href='https://dstechs.net/' target='_blank'>
-            <img src='https://raw.githubusercontent.com/DSTECHNO/TDW/main/AAU/dstech_logo.png' 
+            <img src='https://raw.githubusercontent.com/DSTECHNO/HW-PILOTS/main/AAU/dstech_logo.png' 
                  alt='D&S Tech' style='width: 100%; max-width: 120px;'>
         </a>
     </div>
