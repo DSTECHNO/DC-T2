@@ -33,7 +33,7 @@ def load_npz_case(npz_filename: str, vtk_filename: str):
     mesh = pv.read(vtk_filename)
 
     keys = list(data.files)
-    st.sidebar.write("NPZ keys:", keys)   # <- bunu görünce anahtar adını anlayacağız
+    
 
     T = data["T"] if "T" in keys else None
     U = data["U"] if "U" in keys else None
