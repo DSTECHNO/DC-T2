@@ -1,6 +1,6 @@
-# Thermal Digital Twin for AAU Data Centre
+# Thermal Digital Twin for TOFAS Data Centre
 
-Interactive thermal digital twin visualization tool developed for Aalborg University data centre.
+Interactive thermal digital twin visualization tool developed for TOFAS data centre.
 
 ## Features
 
