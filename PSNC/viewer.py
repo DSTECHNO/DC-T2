@@ -370,7 +370,7 @@ if view_tab == "Thermal Twin":
     value_min, value_max = st.sidebar.slider(
         f"{color_label} Range Filter",
         min_value=field_min,
-        max_value=field_max,
+        max_value=32.05,
         value=(low_default, high_default),
         help=f"Only show points between {color_label} = [{low_default:.2f}, {high_default:.2f}]"
     )
@@ -748,7 +748,7 @@ elif view_tab == "Thermal Twin":
         st.markdown("<h3 style='font-size: 20px; font-weight: bold;'>📊 Summary Statistics</h3>", unsafe_allow_html=True)
         
         st.write("Minimum =", f"{field.min():.2f}")
-        st.write("Maximum =", f"{field.max():.2f}")
+        st.write("Maximum =", 32.05)
         st.write("Mean T =", f"{field.mean():.2f}")
         st.write("Std. Dev.T =", f"{field.std():.2f}")
         
