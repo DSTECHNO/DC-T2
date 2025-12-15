@@ -286,7 +286,7 @@ st.markdown("""
 </style>
 """, unsafe_allow_html=True)
 
-st.title("Thermal Twin for EMPA Pilot")
+st.title("Thermal Twin for PSNC Pilot")
 
 HF_USER = "mkuzaay"  # örn: "DSTECHNO"
 
