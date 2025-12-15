@@ -445,39 +445,31 @@ with logo_col2:
 if view_tab == "About":
 
     # TOFAS Building Image
-    st.image("TOFAS/tofas.jpg", caption="Poznan Supercomputing And Networking Center", width=500)
+    st.image("TOFAS/tofas.jpg", caption="TOFAS Türk Otomobil Fabrikası A.Ş.", width=500)
 
     st.markdown("""
 ### Facility Information
-- **Location:** Poznan, Poland
+- **Location:** Bursa, Türkiye
 - **Cooling Technology:** Air cooling infrastructure
 
 ### IT Infrastructure
-- **Number of Server Racks:** 2 Racks (9 Servers)
-- **Total IT Capacity:** 3.778 kW
-- **Rack Power Range:** 836 W - 2942 W
+- **Number of Server Racks:** 16 Racks (45 Servers)
+- **Total IT Capacity:** 20.062 kW
+- **Rack Power Range:** 0 W - 5848 W
 - **Configuration:** Variable thermal loads
 
 ### Cooling System
 - **Cooling Method:** Air-based cooling units
-- **Number of Cooling Units:** 2 (excluding 1 ventilation)
-- **Total Cooling Capacity:** 4.68 kW
-- **Air Flow Rate:** 0.6421 kg/s each
+- **Number of Cooling Units:** 4 (2 active)
+- **Air Flow Rate:** 0.889 kg/s each
 
 ### Operating Conditions
-- **Ambient Temperature:** 20°C
-- **Inlet Air Temperature:** 18.7°C
-- **Outlet Air Temperature:** 25.0°C
-- **Rack Air Flow:** 0.212 kg/s
+- **Ambient Temperature:** 17°C
+- **Inlet Air Temperature:** 18.1°C
+- **Outlet Air Temperature:** 24.7°C
+- **Rack Air Flow:** 0.6-5.68 kg/s
 """)
 
-    st.markdown("""
-### Scientific Validation & Methodology
-
-This interactive tool visualizes the thermal dynamics of the pilot data centre using a high-resolution Computational Fluid Dynamics (CFD) model. The simulation results have been rigorously validated against experimental measurements, including airflow velocities and server inlet temperatures, to ensure high accuracy. This validated digital twin forms the basis for our KPI-informed retrofitting strategies, demonstrating significant potential for energy efficiency improvements. For a comprehensive analysis of the methodology and results, please refer to our published research.
-
-**Energy efficiency enhancement in two European data centers through CFD modeling** - [Read the paper](https://www.nature.com/articles/s41598-025-11048-0)
-""")
 
     st.markdown("""
 ---
