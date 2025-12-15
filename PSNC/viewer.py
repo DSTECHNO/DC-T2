@@ -444,31 +444,31 @@ with logo_col2:
 # -------------------------------------------------
 if view_tab == "About":
 
-    # EMPA Building Image
+    # PSNC Building Image
     st.image("PSNC/psnc.jpg", caption="Poznan Supercomputing And Networking Center", width=500)
 
     st.markdown("""
 ### Facility Information
-- **Location:** Empa NEST Building, Switzerland 
-- **Cooling Technology:** Hybrid cooling (air+liquid) infrastructure
+- **Location:** Poznan, Poland
+- **Cooling Technology:** Air cooling infrastructure
 
 ### IT Infrastructure
-- **Number of Server Racks:** 32
-- **Total IT Capacity:** 2.83 kW
-- **Rack Power Range:** 68 W - 309 W
+- **Number of Server Racks:** 2 Racks (9 Servers)
+- **Total IT Capacity:** 3.778 kW
+- **Rack Power Range:** 836 W - 2942 W
 - **Configuration:** Variable thermal loads
 
 ### Cooling System
 - **Cooling Method:** Air-based cooling units
-- **Number of Cooling Units:** 4
-- **Total Cooling Capacity:** 5 kW (each one is 1250 W)
-- **Air Flow Rate:** 0.207 - 1.553 kg/s per unit
+- **Number of Cooling Units:** 2 (excluding 1 ventilation)
+- **Total Cooling Capacity:** 4.68 kW
+- **Air Flow Rate:** 0.6421 kg/s each
 
 ### Operating Conditions
-- **Ambient Temperature:** 24.5°C
-- **Inlet Air Temperature:** 23.50 - 27.50°C
-- **Outlet Air Temperature:** 26.50 - 54.00°C
-- **Rack Air Flow:** 0.0091 - 0.0148 kg/s
+- **Ambient Temperature:** 20°C
+- **Inlet Air Temperature:** 18.7°C
+- **Outlet Air Temperature:** 25.0°C
+- **Rack Air Flow:** 0.212 kg/s
 """)
 
     st.markdown("""
