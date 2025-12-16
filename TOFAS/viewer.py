@@ -148,26 +148,16 @@ def interpolate_slice(axis1_s, axis2_s, f_s, grid_resolution):
 
 def get_coords_and_field(mesh, T_field, U_field, field_choice: str):
     if field_choice == "Temperature":
-        if T_field is None:
-            raise ValueError("NPZ does not contain temperature field.")
-
-        # KELVIN → CELSIUS DÖNÜŞÜMÜ BURADA
-        field = T_field - 273.15
+        field = T_field - 273.15   # ✅ KELVIN → CELSIUS SADECE BURADA
         color_label = "T [°C]"
-
     else:
-        if U_field is None:
-            raise ValueError("NPZ does not contain velocity field.")
-
         field = np.linalg.norm(U_field, axis=1)
         color_label = "|U| [m/s]"
 
-    # ---- GÜVENLİK: (N,1) → (N,)
     field = np.asarray(field)
     if field.ndim == 2 and field.shape[1] == 1:
         field = field[:, 0]
 
-    # ---- COORD SEÇİMİ
     if len(field) == mesh.n_cells:
         pts = mesh.cell_centers().points
     elif len(field) == mesh.n_points:
@@ -180,7 +170,6 @@ def get_coords_and_field(mesh, T_field, U_field, field_choice: str):
 
     x, y, z = pts[:, 0], pts[:, 1], pts[:, 2]
     return x, y, z, field, color_label
-
 
 # -------------------------------------------------
 # DENSITY-AWARE DOWNSAMPLING (MESH SIKLIĞINA GÖRE)
