@@ -70,8 +70,8 @@ def load_npz_case(npz_filename: str, vtk_filename: str):
     mesh = pv.read(vtk_filename)
 
     keys = list(data.files)
-    T = data["block_0_point_T"] if "block_0_point_T" in keys else None
-    U = data["block_0_point_U"] if "block_0_point_U" in keys else None
+    T = data["T"] if "T" in keys else None
+    U = data["U"] if "U" in keys else None
 
     return mesh, T, U
 # -------------------------------------------------
