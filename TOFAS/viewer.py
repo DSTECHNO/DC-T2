@@ -70,8 +70,22 @@ def load_npz_case(npz_filename: str, vtk_filename: str):
     mesh = pv.read(vtk_filename)
 
     keys = list(data.files)
-    T = data["T"] if "T" in keys else None
-    U = data["U"] if "U" in keys else None
+
+    # Temperature
+    if "cell_T" in keys:
+        T = data["cell_T"]
+    elif "T" in keys:
+        T = data["T"]
+    else:
+        T = None
+
+    # Velocity
+    if "cell_U" in keys:
+        U = data["cell_U"]
+    elif "U" in keys:
+        U = data["U"]
+    else:
+        U = None
 
     return mesh, T, U
 # -------------------------------------------------
