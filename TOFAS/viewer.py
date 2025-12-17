@@ -148,7 +148,7 @@ def interpolate_slice(axis1_s, axis2_s, f_s, grid_resolution):
 
 def get_coords_and_field(mesh, T_field, U_field, field_choice: str):
     if field_choice == "Temperature":
-        field = T_field - 273.15   # ✅ KELVIN → CELSIUS SADECE BURADA
+        field = T_field - 273.15
         color_label = "T [°C]"
     else:
         field = np.linalg.norm(U_field, axis=1)
@@ -365,12 +365,12 @@ else:
 
     # Default all data
     low_default = float(np.percentile(field, 0))
-    high_default = float(np.percentile(field, 100))
+    high_default = float(30.1)
 
     value_min, value_max = st.sidebar.slider(
         f"{color_label} Range Filter",
         min_value=field_min,
-        max_value=field_max,
+        max_value=30.1,
         value=(low_default, high_default),
         help=f"Only show points between {color_label} = [{low_default:.2f}, {high_default:.2f}]"
     )
