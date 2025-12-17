@@ -445,30 +445,30 @@ with logo_col2:
 if view_tab == "About":
 
     # TOFAS Building Image
-    st.image("TOFAS/tofas.jpg", caption="Poznan Supercomputing And Networking Center", width=500)
+    st.image("TOFAS/tofas.jpg", caption="Tofaş Türk Otomobil Fabrikası A.Ş.", width=500)
 
     st.markdown("""
 ### Facility Information
-- **Location:** Poznan, Poland
+- **Location:** Bursa, Türkiye
 - **Cooling Technology:** Air cooling infrastructure
 
 ### IT Infrastructure
-- **Number of Server Racks:** 2 Racks (9 Servers)
-- **Total IT Capacity:** 3.778 kW
-- **Rack Power Range:** 836 W - 2942 W
+- **Number of Server Racks:** 16 Racks
+- **Total IT Capacity:** 19 kW
+- **Rack Power Range:** xxx W - xxx W
 - **Configuration:** Variable thermal loads
 
 ### Cooling System
 - **Cooling Method:** Air-based cooling units
-- **Number of Cooling Units:** 2 (excluding 1 ventilation)
-- **Total Cooling Capacity:** 4.68 kW
-- **Air Flow Rate:** 0.6421 kg/s each
+- **Number of Cooling Units:** 4 (2 active)
+- **Total Cooling Capacity:** xxx kW
+- **Air Flow Rate:** xxx kg/s each
 
 ### Operating Conditions
-- **Ambient Temperature:** 20°C
-- **Inlet Air Temperature:** 18.7°C
-- **Outlet Air Temperature:** 25.0°C
-- **Rack Air Flow:** 0.212 kg/s
+- **Ambient Temperature:** xx°C
+- **Inlet Air Temperature:** 23°C
+- **Outlet Air Temperature:** 47°C
+- **Rack Air Flow:** xxx kg/s
 """)
     
     st.markdown("""
