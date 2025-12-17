@@ -470,15 +470,7 @@ if view_tab == "About":
 - **Outlet Air Temperature:** 25.0°C
 - **Rack Air Flow:** 0.212 kg/s
 """)
-
-    st.markdown("""
-### Scientific Validation & Methodology
-
-This interactive tool visualizes the thermal dynamics of the pilot data centre using a high-resolution Computational Fluid Dynamics (CFD) model. The simulation results have been rigorously validated against experimental measurements, including airflow velocities and server inlet temperatures, to ensure high accuracy. This validated digital twin forms the basis for our KPI-informed retrofitting strategies, demonstrating significant potential for energy efficiency improvements. For a comprehensive analysis of the methodology and results, please refer to our published research.
-
-**Energy efficiency enhancement in two European data centers through CFD modeling** - [Read the paper](https://www.nature.com/articles/s41598-025-11048-0)
-""")
-
+    
     st.markdown("""
 ---
 <h3 style='font-style: italic;'>D&S Tech | Digital Twin Solutions</h3>
