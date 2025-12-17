@@ -445,7 +445,7 @@ with logo_col2:
 if view_tab == "About":
 
     # TOFAS Building Image
-    st.image("tofas.png", caption="Tofaş Türk Otomobil Fabrikası A.Ş.", width=500)
+    st.image("TOFAS/tofas.jpg", caption="Poznan Supercomputing And Networking Center", width=500)
 
     st.markdown("""
 ### Facility Information
