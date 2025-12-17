@@ -799,46 +799,7 @@ elif view_tab == "Thermal Twin":
         }
         </style>
         
-        <div class="kpi-title">KPI Assessment for TOFAS Data Centre</div>
-        
-        <table class="kpi-table">
-            <tr>
-                <th>KPI</th>
-                <th>Value</th>
-                <th>Assessment</th>
-            </tr>
-            <tr>
-                <td><strong>RCI<sub>HI</sub></strong></td>
-                <td>301.27</td>
-                <td>🔥 Hot-air recirculation</td>
-            </tr>
-            <tr>
-                <td><strong>RCI<sub>LO</sub></strong></td>
-                <td>64.55</td>
-                <td>❄️ Cold-air bypass</td>
-            </tr>
-            <tr>
-                <td><strong>RTI</strong></td>
-                <td>275.20</td>
-                <td>⚠️ Overcooling</td>
-            </tr>
-            <tr>
-                <td><strong>RHI</strong></td>
-                <td>0.32</td>
-                <td>🔥 Moderate hot-air recirculation</td>
-            </tr>
-            <tr>
-                <td><strong>RI</strong></td>
-                <td>69.52</td>
-                <td>🔥 Hot-air recirculation</td>
-            </tr>
-            <tr>
-                <td><strong>CCI</strong></td>
-                <td>3.46</td>
-                <td>⚠️ Overcooling and inefficient airflow management</td>
-            </tr>
-        </table>
-        
+                
         <div class="powered-by">Powered by D&S Tech</div>
         <div class="website-link"><a href="https://dstechs.net/" target="_blank">https://dstechs.net/</a></div> """, unsafe_allow_html=True)
         
