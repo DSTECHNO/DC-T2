@@ -147,12 +147,39 @@ def interpolate_slice(axis1_s, axis2_s, f_s, grid_resolution):
     return grid_axis1, grid_axis2, grid_field
 
 def get_coords_and_field(mesh, T_field, U_field, field_choice: str):
+    # -------------------------------------------------
+# FIELD SELECTION + RANGE SLIDER
+# -------------------------------------------------
+if view_tab == "Thermal Twin":
+
     if field_choice == "Temperature":
-        field = T_field - 273.15
+        field = T_field - 273.15  # K → °C
         color_label = "T [°C]"
-    else:
+
+        field_min = float(field.min())
+        field_max = 30.1  # 🔒 Temperature için sabit üst sınır
+
+        low_default = field_min
+        high_default = 30.11
+
+    else:  # Airflow Velocity
         field = np.linalg.norm(U_field, axis=1)
         color_label = "|U| [m/s]"
+
+        field_min = float(field.min())
+        field_max = float(field.max())  # 🔓 U için serbest
+
+        low_default = field_min
+        high_default = field_max
+
+    value_min, value_max = st.sidebar.slider(
+        f"{color_label} Range Filter",
+        min_value=field_min,
+        max_value=field_max,
+        value=(low_default, high_default),
+        help=f"Only show points between {color_label}"
+    )
+
 
     field = np.asarray(field)
     if field.ndim == 2 and field.shape[1] == 1:
