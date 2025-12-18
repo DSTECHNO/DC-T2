@@ -362,15 +362,14 @@ else:
     # ---- RANGE SLIDER: SHOW ONLY POINTS IN SELECTED VALUE RANGE ----
     field_min = float(field.min())
     field_max = float(field.max())
-
-    # Default all data
-    low_default = float(np.percentile(field, 0))
+    
+    low_default  = float(np.percentile(field, 0))
     high_default = float(30.1)
-
+    
     value_min, value_max = st.sidebar.slider(
         f"{color_label} Range Filter",
-        min_value=15.0,
-        max_value=30.1,
+        min_value=field_min,
+        max_value=30.1,              
         value=(low_default, high_default),
         help=f"Only show points between {color_label} = [{low_default:.2f}, {high_default:.2f}]"
     )
