@@ -69,35 +69,11 @@ def load_npz_case(npz_filename: str, vtk_filename: str):
     data = np.load(npz_filename, mmap_mode="r")
     mesh = pv.read(vtk_filename)
 
-    if isinstance(mesh, pv.MultiBlock):
-        mesh = mesh.combine()
+    keys = list(data.files)
+    T = data["T"] if "T" in keys else None
+    U = data["U"] if "U" in keys else None
 
-    keys = set(data.files)
-    T_point = data["T"] if "T" in keys else None
-    U_point = data["U"] if "U" in keys else None
-    T_cell  = data["cell_T"] if "cell_T" in keys else None
-    U_cell  = data["cell_U"] if "cell_U" in keys else None
-
-    # ---- DEBUG: ekrana bas ----
-    st.sidebar.markdown("### Debug (mesh vs npz)")
-    st.sidebar.write("mesh type:", type(mesh))
-    st.sidebar.write("mesh.n_points:", mesh.n_points)
-    st.sidebar.write("mesh.n_cells:", mesh.n_cells)
-    st.sidebar.write("T.size:", None if T_point is None else int(T_point.size))
-    st.sidebar.write("cell_T.size:", None if T_cell is None else int(T_cell.size))
-    st.sidebar.write("NPZ keys:", sorted(list(keys))[:20], "…")
-
-    # ---- EŞLEŞTİRME ----
-    if T_cell is not None and T_cell.size == mesh.n_cells:
-        return mesh, T_cell, U_cell, "cell"
-    if T_point is not None and T_point.size == mesh.n_points:
-        return mesh, T_point, U_point, "point"
-
-    # burada raise yerine ekranda ERROR göster ve stop
-    st.error("NPZ field sizes do not match this VTK mesh. Check sidebar debug numbers.")
-    st.stop()
-
-
+    return mesh, T, U
 # -------------------------------------------------
 # OUTER GEOMETRY (FROM VTK) LOAD
 # -------------------------------------------------
@@ -314,15 +290,13 @@ st.title("Thermal Twin for EMPA Pilot")
 
 HF_USER = "mkuzaay"  # örn: "DSTECHNO"
 
-NPZ_URL = f"https://huggingface.co/datasets/{HF_USER}/hw-pilots-data/resolve/main/ValidEMPA.npz"
-VTK_URL = f"https://huggingface.co/datasets/{HF_USER}/hw-pilots-data/resolve/main/ValidEMPA.vtk"
+NPZ_URL = f"https://huggingface.co/datasets/{HF_USER}/hw-pilots-data/resolve/main/validationCaseEMPA.npz"
+VTK_URL = f"https://huggingface.co/datasets/{HF_USER}/hw-pilots-data/resolve/main/validationCaseEMPA.vtk"
 
-npz_path = ensure_file(NPZ_URL, "ValidEMPA.npz")
-vtk_path = ensure_file(VTK_URL, "ValidEMPA.vtk")
+npz_path = ensure_file(NPZ_URL, "validationCaseEMPA.npz")
+vtk_path = ensure_file(VTK_URL, "validationCaseEMPA.vtk")
 
-mesh, T_field, U_field, field_location = load_npz_case(npz_path, vtk_path)
-st.sidebar.write("Using field location:", field_location)
-
+mesh, T_field, U_field = load_npz_case(npz_path, vtk_path)
 
 
 x, y, z, field, color_label = get_coords_and_field(mesh, T_field, U_field, "Temperature")
