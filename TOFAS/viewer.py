@@ -439,8 +439,8 @@ if view_tab == "About":
 
 ### Operating Conditions
 - **Ambient Temperature:** 17°C
-- **Inlet Air Temperature:** 23°C
-- **Outlet Air Temperature:** 47°C
+- **Inlet Air Temperature:** 17.5°C
+- **Outlet Air Temperature:** 25°C
 """)
 
     st.markdown("""
