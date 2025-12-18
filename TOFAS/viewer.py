@@ -312,7 +312,7 @@ if view_tab == "Thermal Twin":
         high_default = field_max
     else:
         field_min = float(field.min())
-        field_max = float(2.1)
+        field_max = float(1.48)
         low_default = field_min
         high_default = field_max
 
