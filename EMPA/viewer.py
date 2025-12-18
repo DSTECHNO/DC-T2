@@ -66,7 +66,7 @@ def ensure_file(url: str, local_path: str) -> str:
 # NPZ LOAD
 # -------------------------------------------------
 def load_npz_case(npz_filename: str, vtk_filename: str):
-    data = np.load(npz_filename)
+    data = np.load(npz_filename, mmap_mode="r")
     mesh = pv.read(vtk_filename)
 
     keys = list(data.files)
@@ -484,7 +484,7 @@ The numerical model was validated using experimental test cases conducted at the
 <p style='font-size: 14px;'><a href='https://dstechs.net/' target='_blank'>https://dstechs.net/</a></p>
 <p style='font-size: 16px;'>Get Your Thermal Digital Twin. Contact us today: <strong>datacenter@dstechs.net</strong></p>
 """, unsafe_allow_html=True)
-
+    st.stop()
 # -------------------------------------------------
 # RESULTS PAGE
 # -------------------------------------------------
