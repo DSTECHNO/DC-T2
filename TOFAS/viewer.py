@@ -450,7 +450,7 @@ if view_tab == "About":
 <p style='font-size: 16px;'>Get Your Thermal Digital Twin. Contact us today: <strong>datacenter@dstechs.net</strong></p>
 """, unsafe_allow_html=True)
 
-
+    st.stop()
 # -------------------------------------------------
 # RESULTS PAGE
 # -------------------------------------------------
