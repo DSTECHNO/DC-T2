@@ -1,4 +1,4 @@
-# Thermal Digital Twin for Data Centres
+# DC-T²: Thermal Twin for Data Centres
 
 Interactive thermal digital twin visualization tool developed for data centres.
 
