@@ -47,4 +47,4 @@ DC-T2 Community Edition is licensed under the **GNU Affero General Public Licens
 
 Commercial use, including integrating DC-T2 into a closed-source product, offering it as a managed service, or deploying it in an enterprise environment without AGPL obligations, requires a separate commercial license.
 
-For such use cases, please contact **Design and Simulation Technologies Inc.** regarding our Enterprise License options.
+For such use cases, please contact **Design and Simulation Technologies Inc.** at **datacenter@dstechs.net** regarding our Enterprise License options.
