@@ -45,4 +45,6 @@ Copyright © 2026 Design and Simulation Technologies Inc.
 
 DC-T2 Community Edition is licensed under the **GNU Affero General Public License v3.0 (AGPLv3)**.
 
-Commercial use, including offering DC-T2 as a managed service, enterprise deployment, or integration into proprietary systems, requires a separate commercial license. If you require a commercial license for proprietary or enterprise use (e.g., integrating this software into a closed-source product, offering it as a managed service, or deploying it in an enterprise environment without AGPL obligations), please contact **Design and Simulation Technologies Inc.** regarding our Enterprise License options.
+Commercial use, including integrating DC-T2 into a closed-source product, offering it as a managed service, or deploying it in an enterprise environment without AGPL obligations, requires a separate commercial license.
+
+For such use cases, please contact **Design and Simulation Technologies Inc.** regarding our Enterprise License options.
