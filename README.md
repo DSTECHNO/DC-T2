@@ -5,10 +5,13 @@ Unlike classical CFD workflows that remain confined to local machines and static
 ## Why DC-T²?
 **➤ Instant Deployment, Zero Installation**  
 No complex CFD software setup required. Deploy your thermal twin in minutes and share it with stakeholders through a simple web link—accessible from any device, anywhere.
+
 **➤ From Simulation to Decision**  
 Transform static CFD results into interactive insights. Explore 3D thermal distributions, slice through critical zones, and assess KPIs in real-time to make data-driven decisions faster.
+
 **➤ Validated Engineering Foundation**  
 Built on peer-reviewed methodology and validated against experimental data. DC-T² bridges the gap between high-fidelity CFD simulation and practical operational intelligence
+
 **➤ Continuous Thermal Monitoring**  
 Move beyond one-time assessments. Track thermal performance over time, benchmark against industry standards, and continuously improve data centre efficiency.
 ## Features
